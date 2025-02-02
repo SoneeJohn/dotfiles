@@ -1,0 +1,111 @@
+---
+configure_dotfiles: false
+configure_terminal: false
+configure_osx: true
+configure_sublime: false
+
+osx_script: "~/.osx --no-restart"
+
+# Set to 'true' to configure the Dock via dockutil.
+configure_dock: true
+dockitems_remove:
+    - Messages
+    - Maps
+    - Photos
+    - FaceTime 
+    - Calendar
+    - Contacts 
+    - Reminders
+    - Freeform
+    - TV
+    - Music
+    - App Store
+    - System Settings
+    - Launchpad
+dockitems_persist:
+- name: "Slack"
+  path: "/Applications/Slack.app/"
+  pos: 4
+- name: "Notes"
+  path: "/Applications/Notes.app/"
+  pos: 5
+- name: "Xcode"
+  path: "/Applications/Xcode.app/"
+  pos: 6
+- name: "Terminal"
+  path: "/System/Applications/Utilities/Terminal.app"
+  pos: 7  
+- name: "BBEdit"
+  path: "/Applications/BBEdit.app/"
+  pos: 8
+    
+configure_sudoers: false
+sudoers_custom_config: ''
+# Example:
+# sudoers_custom_config: |
+#   # Allow users in admin group to use sudo with no password.
+#   %admin ALL=(ALL) NOPASSWD: ALL
+
+dotfiles_repo: https://github.com/SoneeJohn/dotfiles.git
+dotfiles_repo_accept_hostkey: true
+dotfiles_repo_local_destination: ~/Developer/dotfiles
+dotfiles_files:
+  - .osx
+  - .vimrc
+
+homebrew_installed_packages:
+  - pastel
+  - fzf
+  - lazygit
+  - ripgrep
+  - git-delta
+  - swiftlint
+  - cmake
+  - doxygen
+  
+homebrew_taps: []
+
+homebrew_cask_appdir: /Applications
+homebrew_cask_apps:
+  - firefox
+  - 1password
+  - raycast
+  - google-chrome
+  - coderunner
+  - fork
+  - setapp
+  - rapidapi ## used to be paw
+  - xcodes
+  - macsymbolicator
+
+# See `geerlingguy.mas` role documentation for usage instructions.
+mas_installed_apps:
+ - { id: 803453959, name: "Slack" }
+ - { id: 1496833156, name: "Swift Playground" }
+ - { id: 1289583905, name: "Pixelmator Pro" }
+ - { id: 425424353, name: "The Unarchiver" }
+ - { id: 1569813296, name: "1Password for Safari" }
+ - { id: 587512244, name: "Kaleidoscope" }
+ - { id: 409183694, name: "Keynote" }
+ - { id: 409203825, name: "Numbers" }
+ - { id: 409201541, name: "Pages" }
+ - { id: 682658836, name: "Garageband" }
+ - { id: 408981434, name: "iMovie" }
+ - { id: 404009241, name: "BBedit" }
+ - { id: 1287239339, name: "Colorslurp" }
+ - { id: 1365531024, name: "1Blocker" }
+ - { id: 1435957248, name: "Drafts" }
+ - { id: 1376402589, name: "StopTheMadness" }
+ - { id: 1191449274, name: "Toothfairy" }
+ - { id: 429449079, name: "Patterns" }
+ - { id: 310633997, name: "WhatsApp" }
+ - { id: 430255202, name: "Mactracker" }
+ - { id: 872564448, name: "Lookup" }
+ - { id: 413965349, name: "Solver 2" }
+ - { id: 497799835, name: "Xcode" }
+
+composer_packages: []
+gem_packages: []
+npm_packages: []
+pip_packages: []
+post_provision_tasks: []
